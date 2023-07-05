@@ -1,0 +1,54 @@
+{
+  "assignment-ranges": [
+    {
+      "entry-point": 100000,
+      "size": 300
+    }
+  ],
+  "module-name": "example-system",
+  "module-revision": "2007-06-09",
+  "items": [
+    {
+      "namespace": "module",
+      "identifier": "example-system",
+      "sid": 100000
+    },
+    {
+      "namespace": "data",
+      "identifier": "/example-system:system",
+      "sid": 100001
+    },
+    {
+      "namespace": "data",
+      "identifier": "/example-system:system/interface",
+      "sid": 100002
+    },
+    {
+      "namespace": "data",
+      "identifier": "/example-system:system/interface/name",
+      "sid": 100003,
+      "type": "string"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/example-system:system/interface/observed-speed",
+      "sid": 100004,
+      "type": "uint32"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/example-system:system/interface/speed",
+      "sid": 100005,
+      "type":"      "mapping": {
+        "protect": 0,
+        "1": "bypass",
+        "2": "discard"
+      }
+    }
+  ],
+  "key-mapping": {
+    "100002": [
+      100003
+    ]
+  }
+}

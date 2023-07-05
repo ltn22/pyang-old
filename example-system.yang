@@ -1,0 +1,57 @@
+module example-system { // Contents of "example-system.yang"
+    yang-version 1.1;
+    namespace "urn:example:system";
+    prefix "sys";
+
+    organization "Example Inc.";
+    contact "joe@example.com";
+    description
+        "The module for entities implementing the Example system.";
+
+    revision 2007-06-09 {
+        description "Initial revision.";
+    }
+
+    typedef policy-t {
+    type enumeration {
+        enum protect {
+        description
+            "PROTECT the traffic with OSCORE.";
+        }
+        enum bypass {
+        description
+            "The CoAP resource does not require
+            OSCORE protection";
+        }
+        enum discard {
+        description
+            "The CoAP message to a resource is
+            discarded.";
+        }
+    }
+    description
+        "The policy applicable to access a CoAP resource. There are three
+        possible values: BYPASS (the CoAP message is unprotected),
+        PROTECT (the CoAP message MUST be protected with OSCORE), and DISCARD
+        (The CoAP message is discarded).";
+    }
+
+    container system {
+        list interface {
+            key "name";
+            config true;
+
+            leaf name {
+                type string;
+            }
+            leaf speed {
+                type policy-t;
+                default "protect";
+            }
+            leaf observed-speed {
+                type uint32;
+                config false;
+            }
+        } 
+    }
+}

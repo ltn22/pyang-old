@@ -1,0 +1,83 @@
+{
+  "assignment-ranges": [
+    {
+      "entry-point": 1000000,
+      "size": 300
+    }
+  ],
+  "module-name": "pokemon",
+  "module-revision": "unknown",
+  "items": [
+    {
+      "namespace": "module",
+      "identifier": "pokemon",
+      "sid": 1000000
+    },
+    {
+      "namespace": "identity",
+      "identifier": "move-absorb",
+      "sid": 1000001
+    },
+    {
+      "namespace": "identity",
+      "identifier": "move-amnesia",
+      "sid": 1000002
+    },
+    {
+      "namespace": "identity",
+      "identifier": "move-base-type",
+      "sid": 1000003
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card",
+      "sid": 1000004
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card/hit-point",
+      "sid": 1000005,
+      "type": "uint32"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card/moves",
+      "sid": 1000006
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card/moves/accuracy",
+      "sid": 1000007,
+      "type": "uint8"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card/moves/move",
+      "sid": 1000008,
+      "type": "identityref"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card/moves/power",
+      "sid": 1000009,
+      "type": "uint8"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card/moves/power-point",
+      "sid": 1000010,
+      "type": "uint8"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/pokemon:card/name",
+      "sid": 1000011,
+      "type": "string"
+    }
+  ],
+  "key-mapping": {
+    "1000006": [
+      1000008
+    ]
+  }
+}
