@@ -55,7 +55,7 @@ class SidPlugin(plugin.PyangPlugin):
                                  action="store_true",
                                  dest="list_sid",
                                  help="Print the list of SID."),
-            optparse.make_option("--sid-extention",
+            optparse.make_option("--sid-extension",
                                  action="store_true",
                                  dest="sid_ext",
                                  help="Add info to the sid file to manipulate coreconf."),
